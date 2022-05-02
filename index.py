@@ -47,6 +47,7 @@ for ranker in url_list:
   channel['name'] = a.contents[0]
   channel['subscriber-count'] = span
   channel['url'] = a.attrs['href']
+  # TODO channel['subscriber-count'] < 50000 で辞書に保存
   channel_list.append(channel)
   #DOM攻撃判定をされないようアクセス間隔を空ける
   print(ranker+'の調査終了')

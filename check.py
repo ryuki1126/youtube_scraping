@@ -1,7 +1,7 @@
 import urllib.robotparser
 
 # robots.txtの読み取り
-robots_txt_url = 'https://www.biccamera.com/robots.txt'
+robots_txt_url = 'https://yutura.net/robots.txt'
 rp = urllib.robotparser.RobotFileParser()
 rp.set_url(robots_txt_url)
 rp.read()
