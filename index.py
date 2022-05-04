@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials 
-import json
 
 # 変数
 url_list = []
@@ -13,7 +12,7 @@ channel_list = []
 domain = 'https://ytranking.net'
 
 # スクレイピング処理(ランキング対象チャンネルの抽出)
-for url_num in range(141, 150):
+for url_num in range(176, 180):
   print('ランキング対象チャンネルの抽出を開始')
 
   url = 'https://ytranking.net/ranking/mon/?p='+str(url_num)+'&mode=view'
@@ -57,6 +56,7 @@ for ranker in url_list:
   print('待機終了')
 
 # スクレイピングで取得したデータをスプレッドシートに入力する
+# TODO JSON形式で返すAPI化させる
 
 #2つのAPIを記述しないとリフレッシュトークンを3600秒毎に発行し続けなければならない
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
